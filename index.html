@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mekong Lab - Chuyển đổi số & AI ĐBSCL</title>
+        <!-- Tải Tailwind CSS CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Cấu hình Font và Màu sắc -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            "mekong-blue": "#167683", // Màu xanh nước/công nghệ
+                            "mekong-light": "#E0F7FA",
+                            "mekong-green": "#38B2AC",
+                        },
+                        fontFamily: {
+                            sans: ["Inter", "sans-serif"],
+                        },
+                    },
+                },
+            };
+        </script>
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="32x32" href="imgs/logomekonglab.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="imgs/logomekonglab.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="imgs/logomekonglab.png">
+        <link rel="shortcut icon" href="imgs/logomekonglab.png">
+        
+        <!-- Sử dụng Google Font: Inter -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            /* CSS tùy chỉnh cho hiệu ứng nền hoặc gradient */
+            .hero-bg {
+                background-image: linear-gradient(135deg, #167683, #38b2ac);
+            }
+            .section-separator {
+                content: "";
+                display: block;
+                width: 80px;
+                height: 4px;
+                margin: 1rem auto;
+                background-color: #fbbf24; /* Vàng nổi bật */
+                border-radius: 9999px;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-50 font-sans text-gray-800 antialiased">
+        <!-- Header & Navigation -->
+        <header class="shadow-md bg-white sticky top-0 z-10">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center"
+            >
+                <div class="flex items-center space-x-3">
+                    <img src="imgs/logomekonglab.png" alt="Mekong Lab Logo" class="h-20 w-auto">
+                    <div class="text-2xl font-bold text-mekong-blue leading-none">
+                        Mekong <span class="text-mekong-green">Lab</span>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a
+                        href="#gioi-thieu"
+                        class="text-gray-600 hover:text-mekong-blue transition duration-300"
+                        >Giới Thiệu</a
+                    >
+                    <a
+                        href="#nghien-cuu"
+                        class="text-gray-600 hover:text-mekong-blue transition duration-300"
+                        >Lĩnh Vực</a
+                    >
+                    <a
+                        href="#san-pham"
+                        class="text-gray-600 hover:text-mekong-blue transition duration-300"
+                        >Sản Phẩm</a
+                    >
+                    <a
+                        href="#bai-bao"
+                        class="text-gray-600 hover:text-mekong-blue transition duration-300"
+                        >Bài báo</a
+                    >
+                    <a
+                        href="#doi-ngu"
+                        class="text-gray-600 hover:text-mekong-blue transition duration-300"
+                        >Đội Ngũ</a
+                    >
+                    <a
+                        href="#lien-he"
+                        class="text-white bg-mekong-blue px-4 py-2 rounded-full hover:bg-mekong-green transition duration-300 shadow-md"
+                        >Liên Hệ</a
+                    >
+                </nav>
+                <!-- Mobile Menu Button (Placeholder) -->
+                <button
+                    class="md:hidden text-mekong-blue p-2 rounded-md hover:bg-mekong-light transition"
+                >
+                    <!-- Icon menu SVG -->
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section id="gioi-thieu" class="hero-bg text-white py-20 sm:py-32">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h1
+                        class="text-5xl sm:text-6xl font-extrabold mb-4 leading-tight"
+                    >
+                        Mekong Lab
+                    </h1>
+                    <p
+                        class="text-xl sm:text-2xl font-light mb-8 max-w-3xl mx-auto"
+                    >
+                        Tiên phong các giải pháp
+                        <span class="font-semibold text-yellow-300"
+                            >Chuyển đổi số</span
+                        >
+                        và
+                        <span class="font-semibold text-yellow-300"
+                            >Trí tuệ Nhân tạo</span
+                        >
+                        cho Đồng bằng Sông Cửu Long
+                    </p>
+                    <a
+                        href="#nghien-cuu"
+                        class="inline-block bg-white text-mekong-blue font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105"
+                    >
+                        Khám phá Lĩnh Vực Nghiên Cứu
+                    </a>
+                </div>
+            </section>
+
+            <!-- Introduction Section -->
+            <section class="py-16 sm:py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2
+                        class="text-3xl sm:text-4xl font-bold text-mekong-blue mb-4"
+                    >
+                        Sứ Mệnh Của Chúng Tôi
+                    </h2>
+                    <div class="section-separator"></div>
+                    <div
+                        class="max-w-4xl mx-auto text-lg text-gray-600 leading-relaxed"
+                    >
+                        <p class="mb-4">
+                            Mekong Lab là một trung tâm nghiên cứu chuyên sâu,
+                            tập hợp các nhà khoa học, kỹ sư và chuyên gia hàng
+                            đầu từ khắp vùng ĐBSCL. Chúng tôi được thành lập với
+                            mục tiêu kép:
+                            <strong>nghiên cứu khoa học</strong> và
+                            <strong>phát triển ứng dụng thực tiễn</strong> nhằm
+                            giải quyết các thách thức đặc thù của khu vực.
+                        </p>
+                        <p>
+                            Fokus chính của Lab là sử dụng sức mạnh của
+                            <strong>Trí tuệ Nhân tạo (AI)</strong> và các công
+                            nghệ <strong>Chuyển đổi số</strong> để tối ưu hóa
+                            Nông nghiệp Thông minh, Quản lý Tài nguyên Môi
+                            trường, và nâng cao chất lượng cuộc sống cho người
+                            dân Đồng bằng.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Areas Section -->
+            <section id="nghien-cuu" class="py-16 sm:py-24 bg-mekong-light">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2
+                        class="text-3xl sm:text-4xl font-bold text-center text-mekong-blue mb-4"
+                    >
+                        Các Lĩnh Vực Nghiên Cứu Trọng Tâm
+                    </h2>
+                    <div class="section-separator"></div>
+
+                    <div class="grid md:grid-cols-3 gap-8 mt-12">
+                        <!-- Area 1: Digital Transformation in Agriculture -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-mekong-green"
+                        >
+                            <div class="text-4xl text-mekong-green mb-4">
+                                <!-- Icon SVG for Agriculture/Plant -->
+                                <svg
+                                    class="w-10 h-10"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">
+                                1. Chuyển đổi số Nông nghiệp (AgriTech)
+                            </h3>
+                            <p class="text-gray-600">
+                                Áp dụng IoT, Big Data và AI để theo dõi sức khỏe
+                                cây trồng, dự báo năng suất và tối ưu hóa việc
+                                sử dụng tài nguyên (nước, phân bón), hướng tới
+                                nền nông nghiệp bền vững và chính xác.
+                            </p>
+                        </div>
+
+                        <!-- Area 2: AI and Environmental Solutions -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-mekong-blue"
+                        >
+                            <div class="text-4xl text-mekong-blue mb-4">
+                                <!-- Icon SVG for Environment/Water -->
+                                <svg
+                                    class="w-10 h-10"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 3v4M3 5h4M6 17v4M17 3v4M21 5h-4M7 9v6h10V9M7 9H4v6h3M17 9h3v6h-3M10 12h4"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">
+                                2. Giải pháp AI cho Môi trường & Biến đổi Khí
+                                hậu
+                            </h3>
+                            <p class="text-gray-600">
+                                Nghiên cứu mô hình AI dự báo xâm nhập mặn, lũ
+                                lụt, và giám sát chất lượng nước. Phát triển
+                                công cụ dựa trên học máy để quản lý tài nguyên
+                                và thích ứng với biến đổi khí hậu.
+                            </p>
+                        </div>
+
+                        <!-- Area 3: Smart Cities & Regional Development -->
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-yellow-500"
+                        >
+                            <div class="text-4xl text-yellow-500 mb-4">
+                                <!-- Icon SVG for Data/Smart -->
+                                <svg
+                                    class="w-10 h-10"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9.75 17L12 19.25L14.25 17M12 19.25V4.75M16 10.75H8M16 13.25H8M16 8.25H8"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3 text-gray-900">
+                                3. Y tế Thông minh (HealthTech)
+                            </h3>
+                            <p class="text-gray-600">
+                                Phát triển các giải pháp AI và công nghệ số cho
+                                ngành y tế, bao gồm chẩn đoán hình ảnh y khoa,
+                                quản lý dữ liệu bệnh nhân và hỗ trợ quyết định
+                                lâm sàng để nâng cao chất lượng chăm sóc sức khỏe
+                                trong khu vực ĐBSCL.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products Section -->
+            <section id="san-pham" class="py-16 sm:py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2
+                        class="text-3xl sm:text-4xl font-bold text-center text-mekong-blue mb-4"
+                    >
+                        Sản Phẩm Tiêu Biểu
+                    </h2>
+                    <div class="section-separator"></div>
+                    <p
+                        class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12"
+                    >
+                        Những giải pháp công nghệ thực tế đã được triển khai và
+                        ứng dụng.
+                    </p>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Product 1 -->
+                        <div
+                            class="bg-white rounded-xl overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.1)] hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition duration-300 group flex flex-col h-full"
+                        >
+                            <div
+                                class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 flex-shrink-0"
+                            >
+                                <!-- Thay thế src bằng ảnh sản phẩm thực tế -->
+                                <img
+                                    src="imgs\product1_DDI.png"
+                                    alt="Tương Tác Thuốc"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                />
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3
+                                    class="text-xl font-bold text-gray-900 mb-2 group-hover:text-mekong-blue transition"
+                                >
+                                    DTDrugs
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                                    Hệ thống quản lý và tra cứu tương tác
+                                    thuốc-thuốc dễ dàng, tiện lợi với hơn 21.112
+                                    cặp tương tác thuốc-thuốc (DDI).
+                                </p>
+                                <a
+                                    href="https://ddi.lab.io.vn/" target="_blank"
+                                    class="text-mekong-green font-semibold hover:text-mekong-blue text-sm flex items-center mt-auto"
+                                >
+                                    Xem chi tiết
+                                    <svg
+                                        class="w-4 h-4 ml-1"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                        ></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div
+                            class="bg-white rounded-xl overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.1)] hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition duration-300 group flex flex-col h-full"
+                        >
+                            <div
+                                class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 flex-shrink-0"
+                            >
+                                <img
+                                    src="imgs\product2_sahi.png"
+                                    alt="App lúa gạo"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                />
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3
+                                    class="text-xl font-bold text-gray-900 mb-2 group-hover:text-mekong-blue transition"
+                                >
+                                    SahiKid
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                                    Nghiên cứu giới thiệu một framework phát
+                                    hiện sỏi thận nhẹ, kết hợp Yolov11n, SAHI và
+                                    thuật toán B-SAHI để nâng cao độ chính xác
+                                    và tốc độ thời gian thực trên ảnh CT.
+                                </p>
+                                <a
+                                    href="https://ictmag.ictvietnam.vn/ict/article/view/1398" target="_blank"
+                                    class="text-mekong-green font-semibold hover:text-mekong-blue text-sm flex items-center mt-auto"
+                                >
+                                    Xem chi tiết
+                                    <svg
+                                        class="w-4 h-4 ml-1"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                        ></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div
+                            class="bg-white rounded-xl overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.1)] hover:shadow-[0_0_25px_rgba(0,0,0,0.15)] transition duration-300 group flex flex-col h-full"
+                        >
+                            <div
+                                class="h-48 bg-gray-200 flex items-center justify-center text-gray-400 flex-shrink-0"
+                            >
+                                <img
+                                    src="imgs\product3_wikicrop.png"
+                                    alt="Dashboard"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                                />
+                            </div>
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3
+                                    class="text-xl font-bold text-gray-900 mb-2 group-hover:text-mekong-blue transition"
+                                >
+                                    WikiCrop
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-4 flex-grow">
+                                    Nền tảng mở chia sẻ và cập nhật kiến thức
+                                    khoa học về cây trồng, kết hợp đóng góp cộng
+                                    đồng, thu thập dữ liệu tự động, tìm kiếm
+                                    thông minh và kiểm duyệt bởi chuyên gia.
+                                </p>
+                                <a
+                                    href="http://wikicrop.ctu.edu.vn:8080/index.php/Trang_Ch%C3%ADnh" target="_blank"
+                                    class="text-mekong-green font-semibold hover:text-mekong-blue text-sm flex items-center mt-auto"
+                                >
+                                    Xem chi tiết
+                                    <svg
+                                        class="w-4 h-4 ml-1"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                                        ></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Papers Section -->
+            <section id="bai-bao" class="py-16 sm:py-24 bg-mekong-light">
+                <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2
+                        class="text-3xl sm:text-4xl font-bold text-center text-mekong-blue mb-4"
+                    >
+                        Công Bố Khoa Học
+                    </h2>
+                    <div class="section-separator"></div>
+                    <p class="text-lg text-gray-600 text-center mb-12">
+                        Các bài báo và công trình nghiên cứu mới nhất từ Mekong
+                        Lab.
+                    </p>
+
+                    <div class="space-y-6">
+                        <!-- Paper Item 1 -->
+                        <div
+                            class="flex flex-col md:flex-row items-start md:items-center bg-white border border-gray-200 p-6 rounded-lg hover:border-mekong-green hover:shadow-md transition duration-300"
+                        >
+                            <div
+                                class="flex-shrink-0 mr-4 mb-4 md:mb-0 md:w-24 text-center"
+                            >
+                                <span
+                                    class="inline-block bg-mekong-light text-mekong-blue text-xs font-bold px-3 py-1 rounded-full"
+                                    >2025</span
+                                >
+                            </div>
+                            <div class="flex-grow md:pr-4">
+                                <h3
+                                    class="text-lg font-bold text-gray-900 mb-2"
+                                >
+                                    Design and Implementation of an Intelligent
+                                    System for Drug-Drug Interaction Management
+                                    and Retrieval
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-2">
+                                    Tác giả: Tien Dao Luu, Minh Tai Phan, Hoang
+                                    Dien Nguyen, Hieu Duong Trung, Thien Vu
+                                    Nguyen
+                                </p>
+                                <p class="text-gray-500 text-xs italic">
+                                    Đăng tại: 11th EAI International Conference
+                                    on Smart Objects and Technologies for Social
+                                    Good (EAI)
+                                </p>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:ml-4 flex-shrink-0">
+                                <a
+                                    href="#"
+                                    class="inline-block text-mekong-blue hover:text-yellow-500 font-semibold text-sm border-b-2 border-transparent hover:border-yellow-500 transition whitespace-nowrap"
+                                    >Chi tiết</a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Paper Item 2 -->
+                        <div
+                            class="flex flex-col md:flex-row items-start md:items-center bg-white border border-gray-200 p-6 rounded-lg hover:border-mekong-green hover:shadow-md transition duration-300"
+                        >
+                            <div
+                                class="flex-shrink-0 mr-4 mb-4 md:mb-0 md:w-24 text-center"
+                            >
+                                <span
+                                    class="inline-block bg-mekong-light text-mekong-blue text-xs font-bold px-3 py-1 rounded-full"
+                                    >2025</span
+                                >
+                            </div>
+                            <div class="flex-grow md:pr-4">
+                                <h3
+                                    class="text-lg font-bold text-gray-900 mb-2"
+                                >
+                                    SahiKid: An Efficient SAHI-based Framework
+                                    for Small Kidney Stone Detection in CT Scans
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-2">
+                                    Tác giả: Tien Dao Luu, Phu An Thai, Thanh
+                                    Ma, Huu Hoa Nguyen, Phat Dat Trinh, Van Kha
+                                    Phan, Chi Thien Nguyen
+                                </p>
+                                <p class="text-gray-500 text-xs italic">
+                                    Đăng tại: Journal of Research and
+                                    Development on Information and Communication
+                                    Technology
+                                </p>
+                            </div>
+                            <div class="mt-4 md:mt-0 md:ml-4 flex-shrink-0">
+                                <a
+                                    href="https://ictmag.ictvietnam.vn/ict/article/view/1398"
+                                    class="inline-block text-mekong-blue hover:text-yellow-500 font-semibold text-sm border-b-2 border-transparent hover:border-yellow-500 transition whitespace-nowrap"
+                                    >Chi tiết</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- View More Button -->
+                    <div class="text-center mt-10">
+                        <a
+                            href="#"
+                            class="inline-block border border-mekong-blue text-mekong-blue font-semibold py-2 px-6 rounded-full hover:bg-mekong-blue hover:text-white transition duration-300"
+                        >
+                            Xem tất cả bài báo
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team/Community Section -->
+            <section id="doi-ngu" class="py-16 sm:py-24 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2
+                        class="text-3xl sm:text-4xl font-bold text-mekong-blue mb-4"
+                    >
+                        Cộng Đồng Nghiên Cứu
+                    </h2>
+                    <div class="section-separator"></div>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+                        Mekong Lab là nơi kết nối các tài năng, từ giảng viên,
+                        sinh viên đến chuyên gia công nghệ, cùng nhau xây dựng
+                        tri thức và giải pháp cho Vùng Đồng bằng Sông Cửu Long.
+                    </p>
+
+                    <!-- Mock Team Cards -->
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
+                        <!-- Member 1 -->
+                        <div class="bg-mekong-light p-6 rounded-xl shadow-lg">
+                            <img
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                                src="imgs\LuuTienDao.jpg"
+                                alt="Placeholder image for Dr. A"
+                            />
+                            <h4 class="font-bold text-gray-900">
+                                TS. Lưu Tiến Đạo
+                            </h4>
+                            <p class="text-sm text-mekong-green">Trưởng Lab</p>
+                            <p class="text-xs text-gray-500 mt-2">
+                                Chuyên gia AI & Học máy
+                            </p>
+                        </div>
+                        <!-- Member 2 -->
+                        <div class="bg-mekong-light p-6 rounded-xl shadow-lg">
+                            <img
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                                src="imgs\PhanMinhTai.png"
+                                alt="Placeholder image for Student Phan Minh Tai"
+                            />
+                            <h4 class="font-bold text-gray-900">
+                                SV. Phan Minh Tài
+                            </h4>
+                            <p class="text-sm text-mekong-green">
+                                Nghiên cứu viên
+                            </p>
+                            <p class="text-xs text-gray-500 mt-2">
+                                Phát triển và ứng dụng Computer Vision
+                            </p>
+                        </div>
+                        <!-- Member 3 -->
+                        <div class="bg-mekong-light p-6 rounded-xl shadow-lg">
+                            <img
+                                class="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                                src="imgs/NguyenHoangDien.png"
+                                alt="Placeholder image for Student C"
+                            />
+                            <h4 class="font-bold text-gray-900">
+                                SV. Nguyễn Hoàng Điển
+                            </h4>
+                            <p class="text-sm text-mekong-green">
+                                Nghiên cứu viên
+                            </p>
+                            <p class="text-xs text-gray-500 mt-2">Phát triển và ứng dụng Computer Vision</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action / Contact Section -->
+            <section id="lien-he" class="py-16 bg-mekong-blue text-white">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h2 class="text-3xl font-bold mb-4">
+                        Bạn muốn tham gia vào công cuộc chuyển đổi?
+                    </h2>
+                    <p class="text-xl mb-8">
+                        Hãy cùng chúng tôi kiến tạo tương lai thông minh và bền
+                        vững cho ĐBSCL.
+                    </p>
+
+                    <div
+                        class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4"
+                    >
+                        <a
+                            href="mailto:info@mekonglab.edu.vn"
+                            class="inline-block bg-yellow-400 text-mekong-blue font-bold py-3 px-8 rounded-full shadow-xl hover:bg-yellow-500 transition duration-300 transform hover:scale-105"
+                        >
+                            Gửi Email Liên Hệ
+                        </a>
+                        <a
+                            href="#"
+                            class="inline-block border-2 border-white text-white font-bold py-3 px-8 rounded-full shadow-xl hover:bg-white hover:text-mekong-blue transition duration-300 transform hover:scale-105"
+                        >
+                            Xem Cơ Hội Hợp Tác
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-8">
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm"
+            >
+                <p>
+                    &copy; 2025 Mekong Lab.
+                </p>
+                <div class="mt-2 space-x-4">
+                    <a href="#" class="hover:text-mekong-green"
+                        >Chính sách bảo mật</a
+                    >
+                    <span class="text-gray-600">|</span>
+                    <a href="#" class="hover:text-mekong-green"
+                        >Điều khoản sử dụng</a
+                    >
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
